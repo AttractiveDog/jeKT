@@ -2,7 +2,9 @@ import { StyleSheet, Text, View, Pressable } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginScreen from "./screens/login";
-import OtherScreen from "./screens/details";
+import AccountType from "./screens/accType";
+import AnonAcc from "./screens/anonAcc";
+import DetScreen from "./screens/detailsAcc";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +22,21 @@ export default function App() {
           />
           <Stack.Screen
             name="Other"
-            component={OtherScreen}
+            component={AccountType}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="AnonAcc"
+            component={AnonAcc}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="DetScreen"
+            component={DetScreen}
             options={{
               headerShown: false,
             }}

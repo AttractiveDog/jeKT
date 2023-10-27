@@ -77,7 +77,7 @@ const LoginScreen = ({ navigation }) => {
               <Text
                 style={{ fontFamily: "Karma2", color: "#000", fontSize: 20 }}
               >
-                {isConnected ? "disconnect?" : "connect?" }
+                {isConnected ? "disconnect?" : "connect?"  }
               </Text>
             </View>
           </Pressable>
@@ -88,7 +88,16 @@ const LoginScreen = ({ navigation }) => {
           />
         </View>
       </View>
-      <LoginButton/>
+      
+      <View style={styles.btn}>
+        <Text>
+        {isConnected ? <LoginButton/> : 1}
+        </Text>
+        
+      </View>
+      
+      
+      
     </View>
   );
 };
@@ -96,6 +105,11 @@ const LoginScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   text: {
     fontSize: 24,
+  },
+  btn : {
+    flex: 1,
+        justifyContent: 'flex-end', 
+        alignItems: 'flex-end', 
   },
   button: {
     width: 150,
@@ -131,7 +145,7 @@ const styles = StyleSheet.create({
   heading: {
     fontSize: 70,
     paddingBottom: 16,
-    color: "#fca311",
+    color: "#724cf9",
     fontFamily: "Karma",
   },
   pressableMargin: {
